@@ -25,6 +25,8 @@
     "express": "~4.14.1",
     "jade": "~1.11.0",
     "morgan": "~1.7.0",
+    "npm-test-package1": "git+https://github.com/foundy/npm-test-package1.git",
+    "npm-test-package2": "git+https://github.com/foundy/npm-test-package2.git",
     "serve-favicon": "~2.3.2"
   }
 }
