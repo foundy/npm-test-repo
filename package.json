@@ -2,9 +2,11 @@
   "name": "npm-test-repo",
   "version": "0.1.0",
   "description": "NPM 테스트용 저장소",
-  "main": "index.js",
+  "main": "./bin/www",
+  "private": false,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,13 @@
     "url": "https://github.com/foundy/npm-test-repo/issues"
   },
   "homepage": "https://github.com/foundy/npm-test-repo#readme",
-  "dependencies": {}
+  "dependencies": {
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "express": "~4.14.1",
+    "jade": "~1.11.0",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.2"
+  }
 }
