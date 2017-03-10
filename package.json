@@ -6,7 +6,8 @@
   "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./bin/www"
+    "start": "DEBUG=npm-test-repo:* node ./bin/www",
+    "compile": "webpack --progress"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "morgan": "~1.7.0",
     "npm-test-package1": "git+https://github.com/foundy/npm-test-package1.git",
     "npm-test-package2": "git+https://github.com/foundy/npm-test-package2.git",
-    "serve-favicon": "~2.3.2"
+    "webpack": "^2.2.1",
+    "webpack-dev-middleware": "^1.10.1"
   }
 }
