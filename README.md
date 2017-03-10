@@ -22,15 +22,22 @@ directory structure
 
 ## Quick Start
 
-install dependencies
+shortcut
 ```bash
+$ cd workflow-test
+$ npm install
+$ [sudo] npm link ../workflow-test-package1
+$ [sudo] npm link ../workflow-test-package2
+```
+
+shortcut is the equivalent of doing
+```bash
+# install dependencies
 $ pushd workflow-test
 $ npm install
 $ popd
-```
 
-create global symbolic link
-```bash
+# create global symbolic link
 $ pushd workflow-test-package1
 $ [sudo] npm link
 $ popd
@@ -38,15 +45,15 @@ $ popd
 $ pushd workflow-test-package2
 $ [sudo] npm link
 $ popd
-```
 
-create a symlink from the local node_modules
-```bash
+# create a symlink from the local node_modules
 $ pushd workflow-test
 $ npm link workflow-test-package1
 $ npm link workflow-test-package2
 $ popd
 ```
+
+### Run
 
 for Development
 ```bash
@@ -67,4 +74,29 @@ $ npm run compile
 
 # run
 $ NODE_ENV=production npm start
+```
+
+### Unlink
+
+unlink from an application
+```bash
+$ cd workflow-test
+$ npm unlink workflow-test-package1
+$ npm unlink workflow-test-package2
+```
+
+unlink from your system
+```bash
+# unlink package1
+$ cd workflow-test-package1
+$ [sudo] npm unlink
+
+# unlink package2
+$ cd workflow-test-package2
+$ [sudo] npm unlink
+```
+or
+```bash
+$ [sudo] npm r workflow-test-package1 -g
+$ [sudo] npm r workflow-test-package2 -g
 ```
