@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('npm-test-repo:server');
+var debug = require('debug')('workflow-test:server');
 var http = require('http');
 
 /**

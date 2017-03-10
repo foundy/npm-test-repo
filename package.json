@@ -1,24 +1,24 @@
 {
-  "name": "npm-test-repo",
+  "name": "workflow-test",
   "version": "0.1.0",
-  "description": "NPM 테스트용 저장소",
+  "description": "Test workflow with npm and webpack",
   "main": "./bin/www",
   "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "DEBUG=npm-test-repo:* node ./bin/www",
+    "start": "DEBUG=workflow-test:* node ./bin/www",
     "compile": "webpack --progress"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/foundy/npm-test-repo.git"
+    "url": "git+https://github.com/foundy/workflow-test.git"
   },
   "author": "foundy <foundy@foundy.io>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/foundy/npm-test-repo/issues"
+    "url": "https://github.com/foundy/workflow-test/issues"
   },
-  "homepage": "https://github.com/foundy/npm-test-repo#readme",
+  "homepage": "https://github.com/foundy/workflow-test#readme",
   "dependencies": {
     "body-parser": "~1.16.0",
     "cookie-parser": "~1.4.3",
@@ -26,8 +26,8 @@
     "express": "~4.14.1",
     "jade": "~1.11.0",
     "morgan": "~1.7.0",
-    "npm-test-package1": "git+https://github.com/foundy/npm-test-package1.git",
-    "npm-test-package2": "git+https://github.com/foundy/npm-test-package2.git",
+    "workflow-test-package1": "git+https://github.com/foundy/workflow-test-package1.git",
+    "workflow-test-package2": "git+https://github.com/foundy/workflow-test-package2.git",
     "webpack": "^2.2.1",
     "webpack-dev-middleware": "^1.10.1"
   }
