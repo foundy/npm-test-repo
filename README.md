@@ -8,16 +8,18 @@ $ git clone git@github.com:foundy/workflow-test.git
 
 clone packages
 ```
+$ git clone git@github.com:foundy/workflow-test-common.git
 $ git clone git@github.com:foundy/workflow-test-package1.git
 $ git clone git@github.com:foundy/workflow-test-package2.git
 ```
 
 directory structure
 ```
-./
-  workflow-test/
-  workflow-test-package1/
-  workflow-test-package2/
+.
+├── workflow-test
+├── workflow-test-common
+├── workflow-test-package1
+└── workflow-test-package2
 ```
 
 ## Quick Start
@@ -28,6 +30,7 @@ $ cd workflow-test
 $ npm install
 $ [sudo] npm link ../workflow-test-package1
 $ [sudo] npm link ../workflow-test-package2
+$ [sudo] npm link ../workflow-test-common
 ```
 
 shortcut is the equivalent of doing
@@ -46,10 +49,15 @@ $ pushd workflow-test-package2
 $ [sudo] npm link
 $ popd
 
+$ pushd workflow-test-common
+$ [sudo] npm link
+$ popd
+
 # create a symlink from the local node_modules
 $ pushd workflow-test
 $ npm link workflow-test-package1
 $ npm link workflow-test-package2
+$ npm link workflow-test-common
 $ popd
 ```
 
@@ -64,6 +72,7 @@ $ npm start
 # If any change is detected, it’ll run the compilation again of workflow-test
 $ vi ../workflow-test-package1/index.js
 $ vi ../workflow-test-package2/index.js
+$ vi ../workflow-test-common/index.js
 ```
 
 for Production
@@ -83,6 +92,7 @@ unlink from an application
 $ cd workflow-test
 $ npm unlink workflow-test-package1
 $ npm unlink workflow-test-package2
+$ npm unlink workflow-test-common
 ```
 
 unlink from your system
@@ -94,9 +104,14 @@ $ [sudo] npm unlink
 # unlink package2
 $ cd workflow-test-package2
 $ [sudo] npm unlink
+
+# unlink common
+$ cd workflow-test-common
+$ [sudo] npm unlink
 ```
 or
 ```bash
 $ [sudo] npm r workflow-test-package1 -g
 $ [sudo] npm r workflow-test-package2 -g
+$ [sudo] npm r workflow-test-common -g
 ```
